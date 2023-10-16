@@ -10,5 +10,10 @@ public class KafkaConsumerService {
 	public void getConsumedData(String str) {
 		System.out.println("Data Consumed From Kafka Producer : " + str);
 	}
+	
+	@KafkaListener(topics = "kafkatopic",groupId = "group_id_one")
+	public void getConsumedStudentData(String student) {
+		System.out.println("Student Data Consumed From Kafka Producer : " + student);
+	}
 
 }
